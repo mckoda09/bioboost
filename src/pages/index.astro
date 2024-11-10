@@ -14,6 +14,17 @@
         @apply max-w-6xl mx-auto;
       }
     </style>
+    <!-- Alpine Plugins -->
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.x.x/dist/cdn.min.js"
+    ></script>
+
+    <!-- Alpine Core -->
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
   </head>
   <body>
     <!-- hero -->
@@ -435,8 +446,8 @@
     </div>
 
     <!-- rating and order -->
-    <div class="px-9 py-16 space-y-9 bg-primary-500 text-white">
-      <div class="container lg:grid grid-cols-4 gap-9">
+    <div class="px-9 py-16 space-y-9 bg-primary-500">
+      <div class="container lg:grid grid-cols-4 gap-9 text-white">
         <div class="space-y-3">
           <div class="font-bold text-8xl">x25</div>
           <div>В 25 раз полезнее бадов сухих в таблетках</div>
@@ -458,17 +469,368 @@
         </div>
       </div>
 
-      <div class="p-9 rounded-xl bg-white container lg:grid grid-cols-2">
-        <div>form</div>
+      <div
+        class="p-9 rounded-xl bg-white container lg:flex justify-between items-center"
+      >
+        <div class="space-y-5 p-9">
+          <div class="font-semibold text-3xl">Закажите сейчас!</div>
+          <div class="text-xl">
+            Биобуст из живой хлореллы на кремнии<br />3 л/30 дней
+          </div>
+
+          <div>
+            <div class="line-through">3000 ₽</div>
+            <div class="text-3xl font-semibold">2970 ₽</div>
+          </div>
+
+          <div class="text-xl">
+            Отгрузка свежайшего бионапитка напрямую с производства.
+          </div>
+
+          <br />
+
+          <div>
+            <a
+              href="/order"
+              class="text-3xl bg-primary-500 px-6 py-3 rounded-xl text-white"
+              >Заказать</a
+            >
+          </div>
+        </div>
         <img
-          src="https://sec-pay.ru/wp-content/uploads/2024/11/unnamed-file.webp"
+          src="https://sec-pay.ru/wp-content/uploads/2024/11/png23.webp"
           alt="box3"
+          width={362}
         />
       </div>
     </div>
 
-    <!--
-    <div>faq</div>
-    <div>footer</div> -->
+    <!-- Q&A -->
+    <div class="container px-9 py-16 space-y-9">
+      <div class="text-5xl font-semibold text-center">Вопросы и ответы</div>
+
+      <div class="divide-y">
+        <div x-data="{ expanded: false }">
+          <div
+            @click="expanded = ! expanded"
+            class="flex items-center justify-between text-xl font-semibold cursor-pointer select-none"
+          >
+            <div>Какую хлореллу выбрать?</div>
+            <div class="text-3xl font-medium">+</div>
+          </div>
+
+          <div x-show="expanded" x-collapse class="text-xl">
+            Bioboo.st — наиболее полезная форма хлореллы для человека, она 25
+            раз эффективнее других, потому что:
+            <ul class="list-disc">
+              <li>
+                Живая, не сушёная. В вакуумной светозащитной премиум-упаковке
+                сохранила все свойства.
+              </li>
+              <li>Необходимой концентрации — 100 млн. клеток на мл.</li>
+              <li>На кремниевой биосреде, усиливающей эффект.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="divide-y">
+        <div x-data="{ expanded: false }">
+          <div
+            @click="expanded = ! expanded"
+            class="flex items-center justify-between text-xl font-semibold cursor-pointer select-none"
+          >
+            <div>Как пить хлореллу правильно?</div>
+            <div class="text-3xl font-medium">+</div>
+          </div>
+
+          <div x-show="expanded" x-collapse class="text-xl">
+            Лучше натощак, тёплой.
+            <ul class="list-disc">
+              <li>
+                Для восстановительно-оздоровительного эффекта — по 1-2 стакана в
+                день
+              </li>
+              <li>
+                Для профилактики и поддержки организма — минипорциями от 100 мл
+                в день
+              </li>
+            </ul>
+            Можно пить неограниченное время, без перерывов, годами. Можно разбавлять
+            теплой водой (не горячей) или немного подогреть (не в микроволновке).
+          </div>
+        </div>
+      </div>
+      <div class="divide-y">
+        <div x-data="{ expanded: false }">
+          <div
+            @click="expanded = ! expanded"
+            class="flex items-center justify-between text-xl font-semibold cursor-pointer select-none"
+          >
+            <div>Можно смешивать?</div>
+            <div class="text-3xl font-medium">+</div>
+          </div>
+
+          <div x-show="expanded" x-collapse class="text-xl">
+            Да, с БАДами и iHerb, другими витаминами.<br />
+            Можно добавлять лимон, куркуму и делать смузи, соки, десерты и супы —
+            смотри книгу рецептов.
+          </div>
+        </div>
+      </div>
+      <div class="divide-y">
+        <div x-data="{ expanded: false }">
+          <div
+            @click="expanded = ! expanded"
+            class="flex items-center justify-between text-xl font-semibold cursor-pointer select-none"
+          >
+            <div>Можно беременным и кормящим?</div>
+            <div class="text-3xl font-medium">+</div>
+          </div>
+
+          <div x-show="expanded" x-collapse class="text-xl">
+            Да, рекомендуется. Хлорелла насыщает организм полезными веществами.
+            Подробнее при беременности.
+          </div>
+        </div>
+      </div>
+      <div class="divide-y">
+        <div x-data="{ expanded: false }">
+          <div
+            @click="expanded = ! expanded"
+            class="flex items-center justify-between text-xl font-semibold cursor-pointer select-none"
+          >
+            <div>Состав Bioboost</div>
+            <div class="text-3xl font-medium">+</div>
+          </div>
+
+          <div x-show="expanded" x-collapse class="text-xl">
+            Сырая биомасса микроводоросли хлорелла, кремниевая биосреда.
+            Концентрация: 100 млн. клеток на 1 мл. Хлорелла содержит 650
+            микронутриентов, включая белки и витамины.
+          </div>
+        </div>
+      </div>
+      <div class="divide-y">
+        <div x-data="{ expanded: false }">
+          <div
+            @click="expanded = ! expanded"
+            class="flex items-center justify-between text-xl font-semibold cursor-pointer select-none"
+          >
+            <div>Какой вкус у хлореллы?</div>
+            <div class="text-3xl font-medium">+</div>
+          </div>
+
+          <div x-show="expanded" x-collapse class="text-xl">
+            У живой свежей хлореллы естественный природный слабовыраженный вкус.
+            Вкус хлореллы Биобуст мягче за счет кремния. Еще любимый вкус можно
+            придать делая блюда по книге рецептов из хлореллы.
+          </div>
+        </div>
+      </div>
+      <div class="divide-y">
+        <div x-data="{ expanded: false }">
+          <div
+            @click="expanded = ! expanded"
+            class="flex items-center justify-between text-xl font-semibold cursor-pointer select-none"
+          >
+            <div>Срок годности</div>
+            <div class="text-3xl font-medium">+</div>
+          </div>
+
+          <div x-show="expanded" x-collapse class="text-xl">
+            6 месяцев — t 2-12 °C<br />
+            3 месяца — 12-20 °С<br />
+            Хранить в холодильнике. Можно брать сразу с запасом 2-3 коробки (выгоднее,
+            так как не платите 2 раза за доставку).
+          </div>
+        </div>
+      </div>
+      <div class="divide-y">
+        <div x-data="{ expanded: false }">
+          <div
+            @click="expanded = ! expanded"
+            class="flex items-center justify-between text-xl font-semibold cursor-pointer select-none"
+          >
+            <div>Как понять, что хлорелла свежая?</div>
+            <div class="text-3xl font-medium">+</div>
+          </div>
+
+          <div x-show="expanded" x-collapse class="text-xl">
+            Свежая хлорелла имеет травянисто-зелёный цвет и маловыраженный
+            запах. При заказе с сайта или телеграм-бота напиток будет свежайшим.
+            Желательно забирать с точки доставки в тот же день, чтобы хранить
+            его в холодильнике. Если напиток полежит в жару неделю, то его
+            полезные свойства сохранятся, однако цвет станет темнее, а запах
+            более природным. Чем меньше лежит на складе доставки, тем будет
+            свежее. Связь с отделом качества тут.
+          </div>
+        </div>
+      </div>
+      <div class="divide-y">
+        <div x-data="{ expanded: false }">
+          <div
+            @click="expanded = ! expanded"
+            class="flex items-center justify-between text-xl font-semibold cursor-pointer select-none"
+          >
+            <div>Это безопасно?</div>
+            <div class="text-3xl font-medium">+</div>
+          </div>
+
+          <div x-show="expanded" x-collapse class="text-xl">
+            Напиток абсолютно безопасен, натурален и рекомендован даже
+            беременным, детям и пожилым.
+          </div>
+        </div>
+      </div>
+      <div class="divide-y">
+        <div x-data="{ expanded: false }">
+          <div
+            @click="expanded = ! expanded"
+            class="flex items-center justify-between text-xl font-semibold cursor-pointer select-none"
+          >
+            <div>Чем доказана польза?</div>
+            <div class="text-3xl font-medium">+</div>
+          </div>
+
+          <div x-show="expanded" x-collapse class="text-xl">
+            Более 2000 научных исследований. Более подробную информацию вы
+            сможете изучить здесь.
+          </div>
+        </div>
+      </div>
+      <div class="divide-y">
+        <div x-data="{ expanded: false }">
+          <div
+            @click="expanded = ! expanded"
+            class="flex items-center justify-between text-xl font-semibold cursor-pointer select-none"
+          >
+            <div>А если хлореллу в таблетках?</div>
+            <div class="text-3xl font-medium">+</div>
+          </div>
+
+          <div x-show="expanded" x-collapse class="text-xl">
+            В таблетках и порошках потеряно до 90% полезных свойств в отличие от
+            Биобуст.
+          </div>
+        </div>
+      </div>
+      <div class="divide-y">
+        <div x-data="{ expanded: false }">
+          <div
+            @click="expanded = ! expanded"
+            class="flex items-center justify-between text-xl font-semibold cursor-pointer select-none"
+          >
+            <div>Противопоказания</div>
+            <div class="text-3xl font-medium">+</div>
+          </div>
+
+          <div x-show="expanded" x-collapse class="text-xl">
+            <ul class="list-disc">
+              <li>
+                диагностированный гемохроматоз (в BioBoo.st много железа);
+              </li>
+              <li>прием препарата "Варфарин" (снижает его эффективность);</li>
+              <li>повышенная свертываемость крови (BioBoo.st богат калием);</li>
+            </ul>
+            С осторожностью (лучше после консультации с врачом) - при аутоиммунных
+            заболеваниях (BioBoo.st - иммуномодулятор).
+          </div>
+        </div>
+      </div>
+      <div class="divide-y">
+        <div x-data="{ expanded: false }">
+          <div
+            @click="expanded = ! expanded"
+            class="flex items-center justify-between text-xl font-semibold cursor-pointer select-none"
+          >
+            <div>Сертификаты</div>
+            <div class="text-3xl font-medium">+</div>
+          </div>
+
+          <div x-show="expanded" x-collapse class="text-xl">
+            <ul class="list-disc">
+              <li>
+                декларация о соответствии Европейского Экономического Союза
+              </li>
+              <li>протокол испытаний сторонней лабораторией</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="divide-y">
+        <div x-data="{ expanded: false }">
+          <div
+            @click="expanded = ! expanded"
+            class="flex items-center justify-between text-xl font-semibold cursor-pointer select-none"
+          >
+            <div>Можно ли детям?</div>
+            <div class="text-3xl font-medium">+</div>
+          </div>
+
+          <div x-show="expanded" x-collapse class="text-xl">
+            Да. Начиная с 2х лет.<br /><br />
+
+            С 2х до 7ми лет - до 100 мл. в сутки.<br />
+            С 7ми до 15ти - до 300 мл. в сутки.<br />
+            Начиная с 15ти - до 500 мл. в сутки.<br /><br />
+
+            Начинать лучше несколько дней с минипорций по 30-50 мл. и проверять
+            отсутствие аллергических реакций.<br />
+          </div>
+        </div>
+      </div>
+      <div class="divide-y">
+        <div x-data="{ expanded: false }">
+          <div
+            @click="expanded = ! expanded"
+            class="flex items-center justify-between text-xl font-semibold cursor-pointer select-none"
+          >
+            <div>Как правильно открыть коробку?</div>
+            <div class="text-3xl font-medium">+</div>
+          </div>
+
+          <div x-show="expanded" x-collapse class="text-xl">
+            1. Нажмите пальцем на кругляшок "открывать здесь";<br />
+            2. оторвите по перфорации прямоугольное окошко;<br />
+            3. вытащите краник изнутри коробки;<br />
+            4. оторвите у краника защитный блистер;<br />
+            5. снимите с краника защитный колпачок;<br />
+            6. налейте напиток, нажимая на "ушки" краника.<br />
+          </div>
+        </div>
+      </div>
+      <div class="divide-y">
+        <div x-data="{ expanded: false }">
+          <div
+            @click="expanded = ! expanded"
+            class="flex items-center justify-between text-xl font-semibold cursor-pointer select-none"
+          >
+            <div>Где лучше заказывать питьевую хлореллу?</div>
+            <div class="text-3xl font-medium">+</div>
+          </div>
+
+          <div x-show="expanded" x-collapse class="text-xl">
+            На официальном сайте Bioboo.st или в удобном телеграм-боте.
+          </div>
+        </div>
+      </div>
+
+      <div class="flex gap-5 items-center justify-center font-semibold">
+        <a
+          href="https://bioboo.st/#order:%D0%91%D0%B8%D0%BE%D0%91%D1%83%D1%81%D1%82%20%D0%B8%D0%B7%20%D0%B6%D0%B8%D0%B2%D0%BE%D0%B9%20%D1%85%D0%BB%D0%BE%D1%80%D0%B5%D0%BB%D0%BB%D1%8B%20%D0%BD%D0%B0%20%D0%BA%D1%80%D0%B5%D0%BC%D0%BD%D0%B8%D0%B8=2970"
+          class="px-6 py-3 rounded-xl bg-primary-500 text-white"
+        >
+          Заказать
+        </a>
+        <a
+          class="px-6 py-3 rounded-xl text-primary-500 border border-primary-500"
+          href="https://t.me/Bioboost_bot">Промокод при регистрации в ТГ</a
+        >
+      </div>
+    </div>
+
+    <!-- footer -->
+
+    <div></div>
   </body>
 </html>
