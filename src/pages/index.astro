@@ -32,6 +32,7 @@
           cursorY = event.pageY;
 
         document.querySelectorAll(".clorella1").forEach((el) => {
+          // @ts-ignore
           el.style.transform = `translate(${cursorX / 100}px, ${cursorY / 100}px)`;
         });
       };
