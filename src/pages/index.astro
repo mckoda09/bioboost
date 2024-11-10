@@ -25,6 +25,17 @@
       defer
       src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
     ></script>
+
+    <script>
+      document.onmousemove = (event) => {
+        const cursorX = event.pageX,
+          cursorY = event.pageY;
+
+        document.querySelectorAll(".clorella1").forEach((el) => {
+          el.style.transform = `translate(${cursorX / 100}px, ${cursorY / 100}px)`;
+        });
+      };
+    </script>
   </head>
   <body>
     <!-- hero -->
@@ -74,10 +85,61 @@
           Прилив сил и здоровья, без таблеток, уже в первые 7 дней
         </div>
       </div>
-      <img
-        src="https://sec-pay.ru/wp-content/uploads/2024/10/Group-1-1.png"
-        alt="Bioboost"
-      />
+
+      <div class="relative">
+        <img
+          src="https://sec-pay.ru/wp-content/uploads/2024/10/Group-1-1.png"
+          alt="Bioboost"
+        />
+        <div class="absolute top-48 right-8 clorella1">
+          <img
+            src="https://sec-pay.ru/wp-content/uploads/2024/10/clorella1-1.png"
+            alt="clorella"
+            width={92}
+            height={92}
+          />
+        </div>
+        <div class="absolute bottom-40 right-6 clorella1">
+          <img
+            src="https://sec-pay.ru/wp-content/uploads/2024/10/clorella1.png"
+            alt="clorella"
+            width={64}
+            height={64}
+          />
+        </div>
+        <div class="absolute bottom-44 right-28 clorella1">
+          <img
+            src="https://sec-pay.ru/wp-content/uploads/2024/10/clorella1.png"
+            alt="clorella"
+            width={72}
+            height={72}
+          />
+        </div>
+        <div class="absolute bottom-52 right-48 clorella1">
+          <img
+            src="https://sec-pay.ru/wp-content/uploads/2024/10/clorella1-edited.png"
+            alt="clorella"
+            width={64}
+            height={64}
+          />
+        </div>
+        <div class="absolute bottom-36 left-48 clorella1">
+          <img
+            src="https://sec-pay.ru/wp-content/uploads/2024/10/clorella1-1.png"
+            alt="clorella"
+            width={48}
+            height={48}
+          />
+        </div>
+        <div class="absolute bottom-64 right-2 clorella1">
+          <img
+            src="https://sec-pay.ru/wp-content/uploads/2024/10/clorella1-edited.png"
+            alt="clorella"
+            width={64}
+            height={64}
+          />
+        </div>
+      </div>
     </div>
 
     <!-- 2 cards -->
@@ -828,9 +890,5 @@
         >
       </div>
     </div>
-
-    <!-- footer -->
-
-    <div></div>
   </body>
 </html>
