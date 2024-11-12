@@ -27,14 +27,19 @@
     ></script>
 
     <script>
-      document.onmousemove = (event) => {
+      const sleep = (ms: number) => new Promise((res) => setTimeout(res, ms));
+
+      document.onmousemove = async (event) => {
         const cursorX = -event.pageX,
           cursorY = -event.pageY;
 
-        document.querySelectorAll(".clorella1").forEach((el) => {
+        const elements = document.querySelectorAll(".clorella1");
+        for (const el of elements) {
+          await sleep(15);
+
           // @ts-ignore
-          el.style.transform = `translate(${cursorX / 80}px, ${cursorY / 80}px)`;
-        });
+          el.style.transform = `translate(${cursorX / 30}px, ${cursorY / 30}px)`;
+        }
       };
     </script>
   </head>
@@ -386,10 +391,84 @@
             Единственный такой в России, проверено лабораторно:
           </div>
         </div>
-        <img
-          src="https://sec-pay.ru/wp-content/uploads/2024/11/unnamed-file.webp"
-          alt="box1"
-        />
+        <div class="relative">
+          <img
+            src="https://sec-pay.ru/wp-content/uploads/2024/11/unnamed-file.webp"
+            alt="box1"
+          />
+          <div class="absolute top-[40%] left-[0%] clorella1">
+            <img
+              src="https://sec-pay.ru/wp-content/uploads/2024/10/clorella1-1.png"
+              alt="clorella"
+              width={96}
+              height={96}
+            />
+          </div>
+          <div class="absolute top-[25%] left-[25%] clorella1">
+            <img
+              src="https://sec-pay.ru/wp-content/uploads/2024/10/clorella1-1.png"
+              alt="clorella"
+              width={72}
+              height={72}
+            />
+          </div>
+          <div class="absolute top-[30%] left-[35%] clorella1">
+            <img
+              src="https://sec-pay.ru/wp-content/uploads/2024/10/clorella1-1.png"
+              alt="clorella"
+              width={96}
+              height={96}
+            />
+          </div>
+          <div class="absolute top-[75%] left-[20%] clorella1">
+            <img
+              src="https://sec-pay.ru/wp-content/uploads/2024/10/clorella1-1.png"
+              alt="clorella"
+              width={54}
+              height={54}
+            />
+          </div>
+          <div class="absolute top-[90%] left-[40%] clorella1">
+            <img
+              src="https://sec-pay.ru/wp-content/uploads/2024/10/clorella1-1.png"
+              alt="clorella"
+              width={54}
+              height={54}
+            />
+          </div>
+          <div class="absolute top-[100%] left-[15%] clorella1">
+            <img
+              src="https://sec-pay.ru/wp-content/uploads/2024/10/clorella1-1.png"
+              alt="clorella"
+              width={54}
+              height={54}
+            />
+          </div>
+          <div class="absolute top-[130%] left-[15%] clorella1">
+            <img
+              src="https://sec-pay.ru/wp-content/uploads/2024/10/clorella1-1.png"
+              alt="clorella"
+              width={54}
+              height={54}
+            />
+          </div>
+          <div class="absolute top-[115%] right-[40%] clorella1">
+            <img
+              src="https://sec-pay.ru/wp-content/uploads/2024/10/clorella1-1.png"
+              alt="clorella"
+              width={96}
+              height={96}
+            />
+          </div>
+          <div class="absolute top-[95%] right-[35%] clorella1">
+            <img
+              src="https://sec-pay.ru/wp-content/uploads/2024/10/clorella1-1.png"
+              alt="clorella"
+              width={72}
+              height={72}
+            />
+          </div>
+        </div>
       </div>
     </div>
 
@@ -590,7 +669,7 @@
     <div class="container px-9 py-16 space-y-9">
       <div class="text-5xl font-semibold text-center">Вопросы и ответы</div>
 
-      <div class="divide-y divide-solid divide-neutral-300">
+      <div class="divide-y divide-solid divide-neutral-300 px-28">
         <div>
           <div x-data="{ expanded: false }" class="py-5">
             <div
@@ -899,7 +978,7 @@
           </div>
         </div>
 
-        <div class="flex gap-5 items-center justify-center font-semibold">
+        <div class="flex gap-5 items-center justify-center font-semibold pt-9">
           <a
             href="https://bioboo.st/#order:%D0%91%D0%B8%D0%BE%D0%91%D1%83%D1%81%D1%82%20%D0%B8%D0%B7%20%D0%B6%D0%B8%D0%B2%D0%BE%D0%B9%20%D1%85%D0%BB%D0%BE%D1%80%D0%B5%D0%BB%D0%BB%D1%8B%20%D0%BD%D0%B0%20%D0%BA%D1%80%D0%B5%D0%BC%D0%BD%D0%B8%D0%B8=2970"
             class="px-6 py-3 rounded-xl bg-primary-500 text-white"
@@ -913,5 +992,7 @@
         </div>
       </div>
     </div>
+
+    <div>footer</div>
   </body>
 </html>
