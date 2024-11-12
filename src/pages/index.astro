@@ -980,7 +980,7 @@
 
         <div class="flex gap-5 items-center justify-center font-semibold pt-9">
           <a
-            href="https://bioboo.st/#order:%D0%91%D0%B8%D0%BE%D0%91%D1%83%D1%81%D1%82%20%D0%B8%D0%B7%20%D0%B6%D0%B8%D0%B2%D0%BE%D0%B9%20%D1%85%D0%BB%D0%BE%D1%80%D0%B5%D0%BB%D0%BB%D1%8B%20%D0%BD%D0%B0%20%D0%BA%D1%80%D0%B5%D0%BC%D0%BD%D0%B8%D0%B8=2970"
+            href="/#order:%D0%91%D0%B8%D0%BE%D0%91%D1%83%D1%81%D1%82%20%D0%B8%D0%B7%20%D0%B6%D0%B8%D0%B2%D0%BE%D0%B9%20%D1%85%D0%BB%D0%BE%D1%80%D0%B5%D0%BB%D0%BB%D1%8B%20%D0%BD%D0%B0%20%D0%BA%D1%80%D0%B5%D0%BC%D0%BD%D0%B8%D0%B8=2970"
             class="px-6 py-3 rounded-xl bg-primary-500 text-white"
           >
             Заказать
@@ -993,6 +993,82 @@
       </div>
     </div>
 
-    <div>footer</div>
+    <div class="px-9 py-24 bg-primary-500 text-white">
+      <div class="container flex flex-col items-center lg:flex-row gap-9">
+        <div class="space-y-5">
+          <img
+            src="https://sec-pay.ru/wp-content/uploads/2024/11/noroot-1.webp"
+            alt="Bioboost"
+          />
+          <div class="text-xs">
+            Производство «BioBoo.st».<br />
+            Не является лекарством и БАД.<br />
+            Торговый знак и материалы защищены законом.<br />
+            2024
+          </div>
+          <div class="text-xs">
+            <a href="/privacypolicy">Политика конфиденциальности</a>
+          </div>
+        </div>
+        <div class="grow grid grid-cols-2 lg:grid-cols-4 gap-3">
+          {
+            [
+              { text: "Главная", link: "" },
+              { text: "Польза", link: "#profit" },
+              { text: "Книга рецептов", link: "#book" },
+              { text: "Уникальность", link: "#unique" },
+              { text: "Вопрос-ответ", link: "#faq" },
+              { text: "Доставка", link: "/deliveryinfo" },
+              { text: "Хлорелла", link: "/properties" },
+              { text: "Исследования", link: "/issledovaniya" },
+              { text: "Блог о здоровье", link: "/blog" },
+              { text: "О нас", link: "/aboutus" },
+              { text: "Партнёрство", link: "https://t.me/Bioboost_bot" },
+              { text: "Отдел качества", link: "https://t.me/Bioboost_bot" },
+            ].map(({ text, link }) => <a href={link}>{text}</a>)
+          }
+        </div>
+        <div class="flex gap-3">
+          <a href="https://t.me/Bioboost_bot">
+            <div class="bg-white p-3 rounded-full">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="#0C9F35"
+                  d="M16.114 9.291c.552-.552 1.1-1.84-1.2-.276a396 396 0 0 1-6.489 4.372 2.7 2.7 0 0 1-2.117.046c-1.38-.414-2.991-.966-2.991-.966s-1.1-.691.783-1.427c0 0 7.961-3.267 10.722-4.418 1.058-.46 4.647-1.932 4.647-1.932s1.657-.645 1.519.92c-.046.644-.414 2.9-.782 5.338-.553 3.451-1.151 7.225-1.151 7.225s-.092 1.058-.874 1.242a3.8 3.8 0 0 1-2.3-.828c-.184-.138-3.451-2.209-4.648-3.221a.872.872 0 0 1 .046-1.473 169 169 0 0 0 4.835-4.602"
+                ></path>
+              </svg>
+            </div>
+          </a>
+          <a
+            href="https://wa.me/79099338822?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%D0%BF%D0%BE%20%D0%91%D0%B8%D0%BE%D0%B1%D1%83%D1%81%D1%82%3A"
+          >
+            <div class="bg-white text-primary-500 p-3 rounded-full">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                fill="none"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="#0C9F35"
+                  d="M6.014 8.006c.114-.904 1.289-2.132 2.22-1.996V6.01c.907.172 1.625 1.734 2.03 2.436.286.509.1 1.025-.167 1.243-.361.29-.926.692-.808 1.095C9.5 11.5 12 14 13.23 14.711c.466.269.804-.44 1.092-.804.21-.28.726-.447 1.234-.171.759.442 1.474.956 2.135 1.534.33.276.408.684.179 1.115-.403.76-1.569 1.76-2.415 1.557C13.976 17.587 8 15.27 6.08 8.558c-.108-.318-.08-.438-.066-.552"
+                ></path>
+                <path
+                  fill="#0C9F35"
+                  fill-rule="evenodd"
+                  d="M12 23c-1.224 0-1.9-.131-3-.5l-2.106 1.053A2 2 0 0 1 4 21.763V19.5c-2.153-2.008-3-4.323-3-7.5C1 5.925 5.925 1 12 1s11 4.925 11 11-4.925 11-11 11m-6-4.37-.636-.593C3.691 16.477 3 14.733 3 12a9 9 0 1 1 9 9c-.986 0-1.448-.089-2.364-.396l-.788-.264L6 21.764z"
+                  clip-rule="evenodd"></path>
+              </svg>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

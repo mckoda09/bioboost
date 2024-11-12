@@ -9,7 +9,9 @@ export default {
         sans: ["Montserrat"],
       },
       colors: {
-        primary: colors.green,
+        primary: {
+          500: "#0C9F35",
+        },
       },
     },
   },
